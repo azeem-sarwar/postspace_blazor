@@ -8,7 +8,12 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Increment Count</button>
 
-<!-- <button class="btn btn-primary" @onclick="DecrementCount">Decrement Count </button> -->
+@* user counterButton and pass button text and and event *@
+
+ <CounterButton ButtonText="Decrement Count" IncrementCount="DecrementCount" /> 
+
+
+
 
 
 @code {
@@ -19,8 +24,8 @@
         currentCount++;
     }
 
-    <!-- private void DecrementCount()
+    private void DecrementCount()
     {
         currentCount--;
-    } -->
+    } 
 }
