@@ -1,0 +1,19 @@
+@inherits LayoutComponentBase
+
+@using Client.Components.Molecules.Header
+
+<div class="main-layout">
+    <Header />
+
+    <main class="content">
+        @Body
+    </main>
+
+    <footer class="main-footer">
+        &copy; 2024 Atomic Design Store
+    </footer>
+</div>
+
+@code {
+    [Parameter] public string SiteTitle { get; set; } = "Atomic Commerce";
+}

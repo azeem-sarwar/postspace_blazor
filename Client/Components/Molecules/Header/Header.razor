@@ -1,0 +1,32 @@
+@using Client.Components.Atoms.Button
+@using Client.Components.Atoms.Image
+
+<div class="header @HeaderClass" @attributes="AdditionalAttributes">
+
+    <Image Src="@LogoSrc" Alt="@LogoAlt" CssClass="header-logo" />
+
+    <Button onclick="@OnCartClick" class="btn-login">
+        Login
+    </Button>
+
+</div>
+
+
+@code {
+    [Parameter] public string HeaderClass { get; set; } = string.Empty;
+    [Parameter] public string LogoSrc { get; set; } = "assets/logo.svg";
+    [Parameter] public string LogoAlt { get; set; } = "Logo";
+    [Parameter] public EventCallback OnCartClick { get; set; } = EventCallback.Empty;
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> AdditionalAttributes { get; set; } = new Dictionary<string, object>();
+
+    @* event call on click *@
+
+    private async Task HandleButtonOnCLick()
+    {
+        @* alert button is clicked *@
+
+
+        await OnCartClick.InvokeAsync();
+    }
+}

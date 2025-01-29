@@ -1,7 +1,37 @@
-﻿@page "/"
+@page "/"
 
-<PageTitle>Home</PageTitle>
+@using Client.Components.Templates
+@using Client.Components.Molecules.SearchForm
+@* @using Client.Components.Organisms.ProductGrid *@
 
-<h1>Hello, world!</h1>
+<MainLayout SiteTitle="Atomic Design Store">
+    <div class="home-page">
 
-Welcome to your new app.
+
+    </div>
+</MainLayout>
+
+@code {
+    private List<Product> products = new()
+{
+new Product { Id = 1, Name = "Atomic T-Shirt", Price = 29.99m },
+new Product { Id = 2, Name = "Blazor Hoodie", Price = 49.99m }
+};
+
+    private void HandleSearch(string query)
+    {
+        // Implement search logic
+    }
+
+    private void AddToCartHandler(Product product)
+    {
+        // Implement add to cart logic
+    }
+
+    public class Product
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public decimal Price { get; set; }
+    }
+}

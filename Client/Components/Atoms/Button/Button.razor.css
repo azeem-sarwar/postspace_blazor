@@ -1,0 +1,18 @@
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.btn-login {
+    background-color: #01B0F1;
+    color: #fff;
+}
+
+.btn-login:hover {
+    background-color: #fff;
+    color: #01B0F1;
+    border: 1px solid #01B0F1;
+}
+

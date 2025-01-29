@@ -1,0 +1,13 @@
+<input @bind="Value" 
+       @bind:event="oninput"
+       class="form-control @CssClass"
+       placeholder="@Placeholder" />
+
+@code {
+    [Parameter] public string Value { get; set; } = string.Empty;
+    [Parameter] public string Placeholder { get; set; } = string.Empty;
+    [Parameter] public string CssClass { get; set; } = string.Empty;
+}
+
+
+
