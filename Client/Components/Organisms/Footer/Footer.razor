@@ -1,0 +1,40 @@
+@using Client.Components.Atoms.Image
+@using Client.Components.Atoms.Button
+
+@inject NavigationManager NavigationManager
+
+<footer class="scroll-fadein is-fadein">
+    <div class="content-wrapper">
+        <ul class="check-list">
+            <li>
+                <Image src="assets/icon-check.svg" />Eliminates the risk of email attachments.
+            </li>
+            <li>
+                <Image src="assets/icon-check.svg" />Prevents information leakage through complete file encryption.
+            </li>
+            <li>
+                <Image src="assets/icon-check.svg" />No need for the recipient to undergo account registration or
+                password
+                setup.
+            </li>
+            <li>
+                <Image src="assets/icon-check.svg" />You can start the service for free.
+            </li>
+        </ul>
+        <button @onclick="navigateToLink" class="round-btn-wrapper">
+            <div class="round-btn">Try it!</div>
+        </button>
+    </div>
+    <p class="copy-right">Powered by Mid-chain Pvt.</p>
+</footer>
+
+
+@code {
+
+
+    private void navigateToLink()
+    {
+        NavigationManager.NavigateTo("Login");
+    }
+
+}

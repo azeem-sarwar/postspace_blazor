@@ -1,9 +1,13 @@
-<img @attributes="AdditionalAttributes" class="@CssClass" src="@Src" alt="@Alt" />
+<img @attributes="AdditionalAttributes" src="@Src" alt="@Alt"  />
 
 @code {
     [Parameter] public string Src { get; set; } = string.Empty;
     [Parameter] public string Alt { get; set; } = string.Empty;
-    [Parameter] public string CssClass { get; set; } = string.Empty;
+    [Parameter] public string CssClass { get; set; } = "img";
+   
     [Parameter(CaptureUnmatchedValues = true)]
+
+
     public Dictionary<string, object> AdditionalAttributes { get; set; } = new Dictionary<string, object>();
+
 }
