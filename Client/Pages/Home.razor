@@ -1,15 +1,17 @@
 @page "/"
 
 @using Client.Components.Templates
-@using Client.Components.Molecules.SearchForm
+
 @using Client.Components.Organisms.HeroSection
 @using Client.Components.Organisms.Introduction
 @using Client.Components.Organisms.Footer
+@using Client.Components.Molecules.Header
 @* @using Client.Components.Organisms.ProductGrid *@
 
 @layout MainLayout
 
 <div class="home-page">
+    <Header />
     <HeroSection />
     <Introduction />
     <Footer />

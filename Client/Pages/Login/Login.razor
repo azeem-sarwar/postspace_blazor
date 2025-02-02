@@ -1,0 +1,51 @@
+@page "/login"
+@using Client.Models
+
+@using Client.Components.Atoms.Button
+@using Client.Components.Molecules.InputGroup
+@using Client.Components.Atoms.Image
+
+<div class="auth-layout">
+    <div class="auth-layout__content">
+        <EditForm Model="@Model" OnValidSubmit="@OnValidSubmit" class="forms">
+
+
+            <Image Src="assets/logo.svg" class="header-logo" onclick="HandleHomeClick" />
+            <DataAnnotationsValidator />
+
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <InputText id="Email" class="form-control" @bind-Value="@Model.Email" />
+                <ValidationMessage For="@(() => Model.Email)" />
+            </div>
+
+
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <InputText id="Password" type="password" class="form-control" @bind-Value="@Model.Password" />
+                <ValidationMessage For="@(() => Model.Password)" />
+            </div>
+
+
+            <button type="submit" class="login-button">Login</button>
+        </EditForm>
+        <div class="divider">
+            <span class="divider_line" />
+            or
+            <span class="divider_line" />
+
+        </div>
+    </div>
+</div>
+
+@code {
+    private LoginFormModel Model { get; set; } = new();
+
+
+    private async Task OnValidSubmit()
+    {
+        Console.WriteLine($"Logging in with {Model.Email}");
+
+        Console.WriteLine($"Logging in with {Model.Password}");
+    }
+}

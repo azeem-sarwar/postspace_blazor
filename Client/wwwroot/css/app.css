@@ -1,3 +1,7 @@
+/* import  */
+
+
+
 * {
     padding: 0px;
     margin: 0px;
@@ -5,6 +9,14 @@
 }
 
 
+.forms {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
 
 h1:focus {
     outline: none;

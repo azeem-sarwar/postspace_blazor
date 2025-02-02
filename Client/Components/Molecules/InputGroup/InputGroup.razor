@@ -1,0 +1,24 @@
+@using Microsoft.AspNetCore.Components.Forms
+
+<div class="form-group">
+    <label for="@Id">@Label</label>
+    <InputText id="@Id" class="@Class"
+               @bind-Value="@Value"
+               @bind-Value:event="oninput" />
+    <ValidationMessage For="@(() => Value)" />
+</div>
+
+@code {
+    [Parameter] public string Id { get; set; } = $"input-{Guid.NewGuid()}";
+    [Parameter] public string Label { get; set; } = "Label";
+    [Parameter] public string Value { get; set; } = string.Empty;
+    [Parameter] public EventCallback<string> ValueChanged { get; set; }  // ✅ Fix
+    [Parameter] public string Class { get; set; } = string.Empty;
+
+
+    private async Task HandleChange(ChangeEventArgs e)
+    {
+        Value = e.Value?.ToString() ?? string.Empty;
+        await ValueChanged.InvokeAsync(Value); // ✅ Notify parent component
+    }
+}

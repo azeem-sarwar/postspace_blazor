@@ -1,0 +1,80 @@
+
+
+.auth-layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+
+}
+
+.auth-layout__content{
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.login-button {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px -1px #32325d40, 0 1px 3px -1px #0000004d;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    height: 43px;
+    line-height: normal;
+    max-width: 404px;
+    padding: 10px 0;
+    touch-action: manipulation;
+    transition: transform .3s cubic-bezier(.25,.8,.25,1);
+    width: 100%;
+    will-change: transform;
+
+    display: flex;
+    background: #1e4178;
+    color: #f3f3f3;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+
+.form-group {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    width: 100%;
+}
+
+
+.divider{
+    align-items: center;
+    display: flex;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 404px;
+}
+
+.divider_line{
+    background-color: #f5f5f5;
+    flex: 1 1;
+    height: 1px;
+}

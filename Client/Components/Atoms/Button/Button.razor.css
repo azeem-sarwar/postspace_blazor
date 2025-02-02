@@ -16,3 +16,18 @@
     border: 1px solid #01B0F1;
 }
 
+
+.form_submit_button {
+    background-color: #01B0F1;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    justify-self: center;
+
+    border-radius: 20px;
+
+}
+
